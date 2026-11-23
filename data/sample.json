@@ -1,0 +1,543 @@
+{
+ "schema": 1,
+ "source": "sample",
+ "generatedAt": null,
+ "campaign": {
+  "id": "SAMPLE",
+  "name": "Sample data"
+ },
+ "gifts": 1164,
+ "goalUnit": "dollars",
+ "progress": 0.58,
+ "states": {
+  "ND": 212,
+  "MN": 96,
+  "TX": 61,
+  "NY": 58,
+  "VA": 44,
+  "CA": 73,
+  "MT": 39,
+  "SD": 35,
+  "IL": 41,
+  "CO": 38,
+  "WA": 33,
+  "FL": 47,
+  "MA": 29,
+  "OH": 31,
+  "PA": 34,
+  "AZ": 24,
+  "GA": 22,
+  "NC": 25,
+  "MI": 27,
+  "WI": 30,
+  "MO": 18,
+  "TN": 16,
+  "OR": 19,
+  "NJ": 17,
+  "MD": 15,
+  "WY": 14,
+  "NE": 13,
+  "IA": 17,
+  "KS": 11,
+  "OK": 9,
+  "UT": 10,
+  "ID": 1
+ },
+ "stateOrder": [
+  "ND",
+  "MN",
+  "TX",
+  "NY",
+  "VA",
+  "CA",
+  "MT",
+  "SD",
+  "IL",
+  "CO",
+  "WA",
+  "FL",
+  "MA",
+  "OH",
+  "PA",
+  "AZ",
+  "GA",
+  "NC",
+  "MI",
+  "WI",
+  "MO",
+  "TN",
+  "OR",
+  "NJ",
+  "MD",
+  "WY",
+  "NE",
+  "IA",
+  "KS",
+  "OK",
+  "UT",
+  "ID"
+ ],
+ "elsewhere": 5,
+ "recentOffsetsMinutes": [
+  3,
+  4,
+  9,
+  13,
+  14,
+  28,
+  31,
+  33,
+  35,
+  39,
+  40,
+  43,
+  44,
+  48,
+  49,
+  50,
+  76,
+  119,
+  123,
+  124,
+  150,
+  176,
+  315,
+  326,
+  356,
+  412,
+  465,
+  472,
+  474,
+  504,
+  516,
+  557,
+  559,
+  574,
+  662,
+  703,
+  714,
+  807,
+  848,
+  857,
+  898,
+  928,
+  937,
+  940,
+  945,
+  1011,
+  1050,
+  1104,
+  1122,
+  1160,
+  1174,
+  1210,
+  1257,
+  1284,
+  1290,
+  1304,
+  1339,
+  1362,
+  1380,
+  1407,
+  1425,
+  1426
+ ],
+ "sparks": [
+  {
+   "n": "Sam W.",
+   "s": "GA"
+  },
+  {
+   "n": "Ximena N.",
+   "s": "NC"
+  },
+  {
+   "n": "Rosa C.",
+   "s": "TX",
+   "c": "Dallas"
+  },
+  {
+   "n": "Zane A.",
+   "s": "ND",
+   "c": "Bismarck"
+  },
+  {
+   "n": null,
+   "s": "SD"
+  },
+  {
+   "n": "Sam B.",
+   "s": "MD"
+  },
+  {
+   "n": "Olive G.",
+   "s": "MN",
+   "c": "Duluth"
+  },
+  {
+   "n": "Tess W.",
+   "s": "MN",
+   "c": "Moorhead"
+  },
+  {
+   "n": "Hank J.",
+   "s": "OH"
+  },
+  {
+   "n": "Luis J.",
+   "s": "OH"
+  },
+  {
+   "n": "Tess T.",
+   "s": "MN"
+  },
+  {
+   "n": "Zane R.",
+   "s": "ND"
+  },
+  {
+   "n": "Carla S.",
+   "s": "MA"
+  },
+  {
+   "n": null,
+   "s": "ND",
+   "c": "Fargo"
+  },
+  {
+   "n": "Quinn G.",
+   "s": "TX"
+  },
+  {
+   "n": "Rosa D.",
+   "s": "OR"
+  },
+  {
+   "n": "Yara K.",
+   "s": "CA",
+   "c": "Sacramento"
+  },
+  {
+   "n": "Nate B.",
+   "s": "WA"
+  },
+  {
+   "n": "Olive H.",
+   "s": "MT",
+   "c": "Billings"
+  },
+  {
+   "n": "Olive H.",
+   "s": "WI"
+  },
+  {
+   "n": "Sam R.",
+   "s": "OR"
+  },
+  {
+   "n": "Pete K.",
+   "s": "NC"
+  },
+  {
+   "n": null,
+   "s": "NC"
+  },
+  {
+   "n": "Luis K.",
+   "s": "CA",
+   "c": "San Diego"
+  },
+  {
+   "n": "Vic T.",
+   "s": "MT"
+  },
+  {
+   "n": "Yara B.",
+   "s": "GA"
+  },
+  {
+   "n": "Tess K.",
+   "s": "CA"
+  },
+  {
+   "n": "Elena N.",
+   "s": "MN",
+   "c": "Minneapolis"
+  },
+  {
+   "n": "Grace G.",
+   "s": "MN",
+   "c": "Minneapolis"
+  },
+  {
+   "n": "Kate N.",
+   "s": "PA"
+  },
+  {
+   "n": "Quinn S.",
+   "s": "NC"
+  },
+  {
+   "n": null,
+   "s": "FL"
+  },
+  {
+   "n": "Wade H.",
+   "s": "SD",
+   "c": "Rapid City"
+  },
+  {
+   "n": "Wade B.",
+   "s": "FL"
+  },
+  {
+   "n": "Olive S.",
+   "s": "SD",
+   "c": "Rapid City"
+  },
+  {
+   "n": "Sam L.",
+   "s": "TX"
+  },
+  {
+   "n": "Vic T.",
+   "s": "GA"
+  },
+  {
+   "n": "Anna S.",
+   "s": "MN",
+   "c": "Minneapolis"
+  },
+  {
+   "n": "Vic D.",
+   "s": "FL"
+  },
+  {
+   "n": "Maya F.",
+   "s": "WA"
+  },
+  {
+   "n": null,
+   "s": "ND",
+   "c": "Minot"
+  },
+  {
+   "n": "Pete J.",
+   "s": "MD"
+  },
+  {
+   "n": "Isla K.",
+   "s": "ND",
+   "c": "Minot"
+  },
+  {
+   "n": "Sam P.",
+   "s": "IL"
+  },
+  {
+   "n": "Olive T.",
+   "s": "ND"
+  },
+  {
+   "n": "Nate B.",
+   "s": "ND"
+  },
+  {
+   "n": "Olive N.",
+   "s": "NJ"
+  },
+  {
+   "n": "Rosa M.",
+   "s": "FL"
+  },
+  {
+   "n": "Isla R.",
+   "s": "CO"
+  },
+  {
+   "n": null,
+   "s": "MN",
+   "c": "Duluth"
+  },
+  {
+   "n": "Quinn P.",
+   "s": "ND",
+   "c": "Medora"
+  },
+  {
+   "n": "Olive W.",
+   "s": "WI"
+  },
+  {
+   "n": "Grace T.",
+   "s": "CA",
+   "c": "San Diego"
+  },
+  {
+   "n": "Vic R.",
+   "s": "WI"
+  },
+  {
+   "n": "Uma K.",
+   "s": "ND",
+   "c": "Fargo"
+  },
+  {
+   "n": "Pete R.",
+   "s": "IL"
+  },
+  {
+   "n": "Vic C.",
+   "s": "TX",
+   "c": "Dallas"
+  },
+  {
+   "n": "Ben D.",
+   "s": "ND"
+  },
+  {
+   "n": null,
+   "s": "WI"
+  },
+  {
+   "n": "Rosa R.",
+   "s": "MA"
+  },
+  {
+   "n": "Vic E.",
+   "s": "MN",
+   "c": "Duluth"
+  },
+  {
+   "n": "Sam N.",
+   "s": "OR"
+  },
+  {
+   "n": "Anna J.",
+   "s": "CA",
+   "c": "San Diego"
+  },
+  {
+   "n": "Hank D.",
+   "s": "CA",
+   "c": "Sacramento"
+  },
+  {
+   "n": "Maya F.",
+   "s": "TX"
+  },
+  {
+   "n": "Maya L.",
+   "s": "OR"
+  },
+  {
+   "n": "Carla E.",
+   "s": "ND",
+   "c": "Dickinson"
+  },
+  {
+   "n": null,
+   "s": "MA"
+  },
+  {
+   "n": "Tess N.",
+   "s": "AZ"
+  },
+  {
+   "n": "Maya T.",
+   "s": "OH"
+  },
+  {
+   "n": "Wade R.",
+   "s": "MD"
+  },
+  {
+   "n": "Luis G.",
+   "s": "CA"
+  },
+  {
+   "n": "Luis K.",
+   "s": "IL"
+  },
+  {
+   "n": "Frank D.",
+   "s": "MA"
+  },
+  {
+   "n": "Wade W.",
+   "s": "TX",
+   "c": "Dallas"
+  },
+  {
+   "n": "Grace K.",
+   "s": "PA"
+  },
+  {
+   "n": null,
+   "s": "TX",
+   "c": "Dallas"
+  },
+  {
+   "n": "Ben D.",
+   "s": "OH"
+  },
+  {
+   "n": "Quinn C.",
+   "s": "CO"
+  },
+  {
+   "n": "Grace J.",
+   "s": "NY",
+   "c": "Oyster Bay"
+  },
+  {
+   "n": "Quinn K.",
+   "s": "ND",
+   "c": "Dickinson"
+  },
+  {
+   "n": "Grace J.",
+   "s": "NY",
+   "c": "Oyster Bay"
+  },
+  {
+   "n": "Tess N.",
+   "s": "MN"
+  },
+  {
+   "n": "Coach Dan Reyes",
+   "k": "h",
+   "s": "MN",
+   "c": "Moorhead"
+  },
+  {
+   "n": "Elena J.",
+   "s": "FL"
+  },
+  {
+   "n": null,
+   "s": "ND",
+   "c": "Bismarck"
+  },
+  {
+   "n": "Jon R.",
+   "s": "ND"
+  },
+  {
+   "n": "Ruth Olson",
+   "k": "m",
+   "s": "ND",
+   "c": "Dickinson"
+  },
+  {
+   "n": "Zane C.",
+   "s": "MT",
+   "c": "Glendive"
+  },
+  {
+   "n": "Hank R.",
+   "s": "ID",
+   "c": "Boise"
+  }
+ ]
+}

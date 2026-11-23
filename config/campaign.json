@@ -1,0 +1,75 @@
+{
+  "id": "light-the-fire",
+  "mode": "preview",
+  "title": "Light the Fire",
+  "kicker": "Giving Tuesday · Year-end · Giving Hearts Day",
+  "intro": "The fire burns as bright as the giving. Every gift adds a log and sends a spark into the night sky over the Badlands, where it stays.",
+  "purpose": "",
+  "timezone": "America/Chicago",
+  "timezoneLabel": "Central",
+
+  "donorPerfect": {
+    "campaignId": "",
+    "campaignName": "",
+    "goal": 0,
+    "goalUnit": "dollars",
+    "endpoint": "https://www.donorperfect.net/prod/xmlrequest.asp",
+    "timezone": "America/New_York",
+    "recordTypes": ["G"],
+    "anonymousField": "",
+    "tributeTypeField": "memory_honor",
+    "tributeFirstField": "gfname",
+    "tributeLastField": "glname",
+    "tributeCodes": { "M": "memory", "H": "honor" }
+  },
+
+  "give": {
+    "formUrl": "",
+    "fallbackUrl": "https://www.trlibrary.com/support",
+    "amountParam": "",
+    "amounts": [
+      { "value": 26, "note": "For the 26th President" },
+      { "value": 58, "note": "Born in 1858" },
+      { "value": 126, "note": "A brighter spark" },
+      { "value": 260, "note": "Ten logs on the fire" }
+    ],
+    "buttonLabel": "Add a log",
+    "utm": { "utm_source": "lightthefire", "utm_medium": "embed", "utm_campaign": "light-the-fire" }
+  },
+
+  "display": {
+    "showDollars": false,
+    "showNames": true,
+    "showCity": true,
+    "showTributes": true,
+    "tributeFullName": true,
+    "photo": "assets/img/tr-buckskin-bust.webp",
+    "photoAlt": "Theodore Roosevelt in his buckskin hunting suit, 1885",
+    "photoCredit": "T.R. in his buckskin hunting suit, 1885"
+  },
+
+  "fire": {
+    "floor": 0.12,
+    "peakDays": ["2026-12-01", "2027-02-11"],
+    "peak": { "windowMinutes": 60, "giftsForFullFire": 40 },
+    "normal": { "windowMinutes": 1440, "giftsForFullFire": 25 }
+  },
+
+  "phases": [
+    { "name": "Giving Tuesday", "start": "2026-12-01T07:00:00-06:00", "end": "2026-12-02T00:00:00-06:00" },
+    { "name": "Year-end", "start": "2026-12-02T00:00:00-06:00", "end": "2027-01-01T00:00:00-06:00" },
+    { "name": "Giving Hearts Day", "start": "2027-02-11T00:00:00-06:00", "end": "2027-02-12T00:00:00-06:00" }
+  ],
+
+  "matches": [],
+
+  "trail": {
+    "start": "Medora",
+    "end": "Elkhorn Ranch",
+    "stops": [
+      { "at": 0.25, "label": "A quarter of the way" },
+      { "at": 0.5, "label": "Halfway" },
+      { "at": 0.75, "label": "Three quarters" }
+    ]
+  }
+}

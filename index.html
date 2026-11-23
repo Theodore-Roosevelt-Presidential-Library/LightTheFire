@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light the Fire: preview and embed codes | Theodore Roosevelt Presidential Library</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+:root{--night:#092A4D;--orange:#E7805D;--sky:#99ADC5;--gray:#25282A}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Clearface","Clearface Fallback",Georgia,serif;color:var(--gray);line-height:1.5;font-size:18px;background:#fff}
+header{background:var(--night);color:#fff;padding:28px 24px}
+header img{height:38px;width:auto;display:block;margin-bottom:18px}
+h1{margin:0;font-family:"Dharma Gothic E","Dharma Gothic E Fallback",Impact,sans-serif;text-transform:uppercase;font-size:72px;line-height:.85}
+h2{margin:0 0 10px;font-family:"Dharma Gothic E","Dharma Gothic E Fallback",Impact,sans-serif;text-transform:uppercase;font-size:44px;line-height:.9;color:var(--night)}
+main{max-width:1160px;margin:0 auto;padding:32px 24px 80px;display:flex;flex-direction:column;gap:44px}
+p{margin:0 0 10px}
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;list-style:none;margin:0;padding:0;font-family:"Frutiger","Frutiger Fallback",Arial,sans-serif;font-size:15px}
+.status li{border:1px solid var(--sky);padding:14px 16px}
+.status strong{display:block;color:var(--night)}
+.ok{border-left:6px solid var(--night)!important}.todo{border-left:6px solid var(--orange)!important}
+pre{margin:0 0 14px;background:#E6EBF1;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.45;white-space:pre-wrap;word-break:break-word}
+.frame{border:1px solid var(--sky)}
+label{font-family:"Frutiger","Frutiger Fallback",Arial,sans-serif;font-size:15px;display:inline-flex;align-items:center;gap:8px;min-height:44px}
+</style>
+</head>
+<body>
+<header>
+  <img src="assets/img/trpl-wordmark-white.svg" alt="Theodore Roosevelt Presidential Library">
+  <h1>Light the Fire</h1>
+  <p>Preview, setup status and embed codes.</p>
+</header>
+<main>
+  <section>
+    <h2>Setup status</h2>
+    <ul class="status" id="status"><li>Checking…</li></ul>
+  </section>
+
+  <section>
+    <h2>Full page</h2>
+    <p>The fire, the give buttons, the ride to the Elkhorn and the 50-state race. <label><input type="checkbox" id="demo" checked> Show with sample numbers and preview controls</label></p>
+    <pre>&lt;div data-lightthefire="full"&gt;&lt;/div&gt;
+&lt;script src="https://lightthefire.labs.trlibrary.com/embed.js" async&gt;&lt;/script&gt;</pre>
+    <div class="frame" id="fullHolder"></div>
+  </section>
+
+  <section>
+    <h2>Smaller pieces</h2>
+    <p>Each piece can sit alone on any page. Use one script tag per page, after the last piece.</p>
+    <pre>&lt;div data-lightthefire="fire"&gt;&lt;/div&gt;       the fire and count only
+&lt;div data-lightthefire="counter"&gt;&lt;/div&gt;    a small count with a give button
+&lt;div data-lightthefire="progress"&gt;&lt;/div&gt;   the ride to the Elkhorn
+&lt;div data-lightthefire="map"&gt;&lt;/div&gt;        the 50-state race
+&lt;div data-lightthefire="screen"&gt;&lt;/div&gt;     full-screen fire for lobby displays</pre>
+    <p><strong>Counter</strong></p><div class="frame" data-lightthefire="counter" data-demo="1"></div>
+    <p style="margin-top:20px"><strong>Progress</strong></p><div class="frame" data-lightthefire="progress" data-demo="1"></div>
+    <p style="margin-top:20px"><strong>Map</strong></p><div class="frame" data-lightthefire="map" data-demo="1"></div>
+  </section>
+
+  <section>
+    <h2>After a gift</h2>
+    <p>Set the DonorPerfect form's thank-you redirect to the page that holds the embed, with <code>?ltf=thanks</code> on the end. The fire then sends up a spark for the person who just gave.</p>
+    <pre>https://www.trlibrary.com/[page with the embed]?ltf=thanks</pre>
+  </section>
+</main>
+<script>
+(function () {
+  function row(ok, title, text) { return '<li class="' + (ok ? "ok" : "todo") + '"><strong>' + title + "</strong>" + text + "</li>"; }
+  function load(u) { return fetch(u + "?t=" + Date.now(), { cache: "no-store" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }); }
+  Promise.all([load("config/campaign.json"), load("data/live.json").catch(function () { return null; })]).then(function (r) {
+    var c = r[0], d = r[1], dp = c.donorPerfect || {}, g = c.give || {}, h = "";
+    h += row(!!dp.campaignId, "DonorPerfect campaign", dp.campaignId ? "Campaign " + dp.campaignId : "Not set. Add the campaign ID in config/campaign.json.");
+    h += row(!!d, "Live numbers", d ? d.gifts.toLocaleString() + " gifts, last synced " + new Date(d.generatedAt).toLocaleString() : "No data/live.json yet. Add the DP_API_KEY secret and the sync fills it in.");
+    h += row(!!g.formUrl, "Giving form", g.formUrl ? "Buttons go to the DonorPerfect form." : "Not set. Buttons go to " + (g.fallbackUrl || "the support page") + " for now.");
+    h += row(!!(dp.goal || (d && d.progress != null)), "Goal", dp.goal ? "Set in the config: " + dp.goal.toLocaleString() + " " + (dp.goalUnit || "dollars") : (d && d.progress != null ? "Read from DonorPerfect." : "Not set. The ride to the Elkhorn stays hidden until there is a goal."));
+    h += row(c.mode === "live", "Public mode", c.mode === "live" ? "Live: sample numbers are never shown." : "Preview: sample numbers show, with a label, until live numbers exist.");
+    h += row((c.matches || []).length > 0, "Match hours", (c.matches || []).length ? (c.matches.length + " scheduled.") : "None scheduled.");
+    document.getElementById("status").innerHTML = h;
+  }).catch(function () { document.getElementById("status").innerHTML = row(false, "Config", "config/campaign.json could not be read."); });
+
+  var holder = document.getElementById("fullHolder"), box = document.getElementById("demo");
+  function place() {
+    holder.innerHTML = "";
+    var d = document.createElement("div");
+    d.setAttribute("data-lightthefire", "full");
+    if (box.checked) d.setAttribute("data-demo", "1");
+    holder.appendChild(d);
+    var s = document.createElement("script");
+    s.src = "embed.js?v=__BUILD__";
+    document.body.appendChild(s);
+  }
+  box.addEventListener("change", place);
+  place();
+})();
+</script>
+</body>
+</html>
